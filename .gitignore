@@ -2,4 +2,5 @@
 .mypy_cache/
 .pytest_cache/
 .venv/
+dist/
 poetry.lock
