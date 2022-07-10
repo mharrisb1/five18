@@ -1,4 +1,4 @@
-from typing import Any
+from typing import Any, Dict
 from pathlib import Path
 
 try:
@@ -10,13 +10,13 @@ __version__ = "0.1.0"
 
 
 class Tool:
-    def __init__(self, d: dict[Any, Any]) -> None:
+    def __init__(self, d: Dict[Any, Any]) -> None:
         for k, v in d.items():
             setattr(self, k.replace("-", "_"), v)
 
 
 class ToolTable:
-    def __init__(self, d: dict[Any, Any]) -> None:
+    def __init__(self, d: Dict[Any, Any]) -> None:
         for k, v in d.items():
             setattr(self, k.replace("-", "_"), Tool(v))
 
